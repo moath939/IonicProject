@@ -73,7 +73,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
-  });
+  }).state('app.addCandidate', {
+    url: '/addCandidate',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/addCandidate.html',
+        controller: 'AddCandidateCtrl'
+      }
+    }
+  })
+  
+  
+  
+  ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/addCandidate');
 });
